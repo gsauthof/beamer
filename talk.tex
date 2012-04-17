@@ -6,7 +6,7 @@
 %   xcolor
 %   colortbl - commands for colorizing tables
 %   hyperref - e.g. \url, \href, inter-PDF-links ...
-\documentclass[xcolor={dvipsnames}]{beamer}
+\documentclass[xcolor={dvipsnames,table}]{beamer}
 
 \mode<presentation>
 {
@@ -157,6 +157,20 @@ int main()
   return 0;
 }
 \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Color-Table}
+\rowcolors{2}{BurntOrange}{YellowOrange}
+\begin{tabular}{ll}
+  \rowcolor{black}
+  \color{white} Sprache & \color{white} \#Keywords \\
+ Haskell &  21 \\
+ Scheme &  23 \\
+ C (C89) &  32 \\
+ Java &  50 \\
+ Ada &  72 \\
+ C++ &  74 \\
+\end{tabular}
 \end{frame}
 
 \end{document}
