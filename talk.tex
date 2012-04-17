@@ -6,8 +6,7 @@
 %   xcolor
 %   colortbl - commands for colorizing tables
 %   hyperref - e.g. \url, \href, inter-PDF-links ...
-\documentclass{beamer}
-
+\documentclass[xcolor={dvipsnames}]{beamer}
 
 \mode<presentation>
 {
@@ -36,7 +35,12 @@
 \usepackage{amsmath}
 
 % verbatim program code:
-% \usepackage{listings}
+\usepackage{listings}
+\lstset{language=C,
+  basicstyle=\ttfamily,
+  commentstyle=\color{ForestGreen}
+}
+
 % nicer tables:
 % \usepackage{booktabs}
 
@@ -142,7 +146,17 @@
 
 \section{Conclusion}
 
-\begin{frame}{Conclusion}
+\begin{frame}[fragile]{Conclusion}
+  \begin{lstlisting}
+// Is this program correct?
+int main()
+{
+  char *s;
+  strcpy(s, "Hello World");
+  puts(s);
+  return 0;
+}
+\end{lstlisting}
 \end{frame}
 
 \end{document}
